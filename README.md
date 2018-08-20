@@ -1,4 +1,5 @@
 # ceph.install
+```
 [global]                                              #全局，要将配置设置应用于整个集群，请在[global]下输入配置设置。
 fsid = 9ec20e59-1033-4505-920d-113183167b31           #CLUSTER ID，每个Ceph存储集群都有唯一的标识符（fsid）。
 mon initial members = ceph-153,ceph-154,ceph-155      #初始成员，建议最少运行三个ceph监视器在生产存储集群，以确保高可用性。启动期间集群中初始监视器的ID。 如果指定，Ceph需要奇数个监视器来形成初始定额
@@ -17,3 +18,4 @@ osd crush chooseleaf type = 1                         #CRUSH规则用到choosele
 osd_journal_size = 5120
 [mon]
 mon osd allow primary affinity = true
+```
